@@ -31,8 +31,9 @@ public class LabStack03 {
 
 	public static void visitNewWeb() {
 		// write your code here as the above table description of 'visitNewWeb()'
+		input.nextLine();
 		System.out.print("Enter a website name: ");
-		String name = input.next();
+		String name = input.nextLine();
 		history.push(name);
 		System.out.println("Current History => " + history);
 	}
