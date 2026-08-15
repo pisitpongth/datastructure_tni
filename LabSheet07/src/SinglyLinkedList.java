@@ -75,12 +75,14 @@ public class SinglyLinkedList {
 		while (current_node != null) {
 			if (current_index == position) {
 				current_node.data = value;
-				break;
+				System.out.println("Updated data success!!");
+				return;
 			} else {
 				current_index += 1;
 				current_node = current_node.next;
 			}
 		}
+		System.out.println("Updated data fail...");
 	}
 
 	public boolean contains(int value) {
@@ -96,15 +98,10 @@ public class SinglyLinkedList {
 	}
 
 	public void addAll(SinglyLinkedList otherlist) {
-		if (otherlist.isEmpty()) {
-			return;
-		}
-		if (this.isEmpty()) {
-			head = otherlist.head;
-			tail = otherlist.tail;
-		} else {
-			tail.next = otherlist.head;
-			tail = otherlist.tail;
+		Node temp_node = otherlist.head;
+		while (temp_node != null) {
+			this.append(temp_node.data);
+			temp_node = temp_node.next;
 		}
 	}
 }

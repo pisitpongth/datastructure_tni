@@ -49,15 +49,14 @@ public class SinglyApp {
 		int find1 = 104;
 		int find2 = 222;
 		if (list1.contains(find1)) {
-			System.out.println("104 found!!");
+			System.out.println(find1 + " found!!");
 		} else {
-			System.out.println("104 not found...");
+			System.out.println(find1 + " not found...");
 		}
-
 		if (list1.contains(find2)) {
-			System.out.println("222 found!!");
+			System.out.println(find2 + " found!!");
 		} else {
-			System.out.println("222 not found...");
+			System.out.println(find2 + " not found...");
 		}
 	}
 
@@ -69,6 +68,9 @@ public class SinglyApp {
 
 		System.out.println();
 
+		for (int i = 201; i < 206; i++) {
+			list2.append(i);
+		}
 		System.out.println("Element in list1 => " + list1.displayList());
 		System.out.println("Element in list2 => " + list2.displayList());
 		list1.addAll(list2);
@@ -76,6 +78,7 @@ public class SinglyApp {
 
 		System.out.println();
 
+		list1.clear();
 		System.out.println("Element in list1 => " + list1.displayList());
 		System.out.println("Element in list2 => " + list2.displayList());
 		list1.addAll(list2);
