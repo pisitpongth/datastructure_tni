@@ -41,9 +41,27 @@ public class TreeHeight {
 	public static int heightBFS(Node node) {
 		int height = 0;
 		if (node != null) {
+			Deque<Node> queue = new ArrayDeque<Node>();
+			queue.add(node);
 
+			while (!queue.isEmpty()) {
+				int levelSize = queue.size();
+				height++;
+
+				for (int i = 0; i < levelSize; i++) {
+					Node current_node = queue.poll();
+
+					if (current_node.left != null) {
+						queue.add(current_node.left);
+					}
+
+					if (current_node.right != null) {
+						queue.add(current_node.right);
+					}
+				}
+			}
 		}
-		return 0;
+		return height - 1;
 	}
 
 }
