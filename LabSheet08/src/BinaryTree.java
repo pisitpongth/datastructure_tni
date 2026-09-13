@@ -77,6 +77,14 @@ public class BinaryTree {
 		}
 	}
 
+	public void createTree6() {
+		int[] nums = { 40, 20, 70, 30, 25, 35, 32, 55, 85, 80 };
+
+		for (int i : nums) {
+			insert(i);
+		}
+	}
+
 	public void insert(int new_data) {
 		if (root == null) {
 			root = new Node(new_data);
@@ -137,8 +145,8 @@ public class BinaryTree {
 				}
 			}
 		} // end while
-		System.out.println("Parent = " + parent);
-		System.out.println("DeleteNode = " + deleteNode);
+			// System.out.println("Parent = " + parent);
+			// System.out.println("DeleteNode = " + deleteNode);
 	}
 
 	public void delete(int target) {
