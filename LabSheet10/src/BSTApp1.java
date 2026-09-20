@@ -10,12 +10,17 @@ public class BSTApp1 {
 		System.out.println("Minimum Node is " + tree.findMinimum(tree.getRoot()));
 		System.out.println("Maximum Node is " + tree.findMaximum(tree.getRoot()));
 
-		System.out.println();
-		int delNode = 7;
+		int delNode = 60;
 		tree.searchDeleteNode(delNode);
+
+		int target = 40;
+		System.out.println("Is " + target + " in BST => " + tree.findSpecificData(target));
+
 		System.out.println("Parent = " + tree.getParent().data);
 		System.out.println("Delete Node is " + tree.getDeleteNode().data);
-
+		System.out.println();
+		tree.deleteByLeftSubTree();
+		tree.printTree(tree.getRoot(), 0);
 	}
 
 }

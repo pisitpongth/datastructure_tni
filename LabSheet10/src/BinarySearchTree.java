@@ -1,4 +1,3 @@
-import java.text.BreakIterator;
 
 public class BinarySearchTree {
 	private Node root;
@@ -170,18 +169,17 @@ public class BinarySearchTree {
 	}
 
 	public boolean findSpecificData(int target) {
-		parent = root;
 		Node current_node = root;
-		while (true) {
+		while (current_node != null) {
 			if (target == current_node.data) {
 				return true;
 			}
-			parent = current_node;
 			if (target < current_node.data) {
 				current_node = current_node.left;
 			} else {
 				current_node = current_node.right;
 			}
 		}
+		return false;
 	}
 }
